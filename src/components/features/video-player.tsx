@@ -61,8 +61,9 @@ export function VideoPlayer({ className }: VideoPlayerProps) {
     // Create player
     const player = videojs(videoRef.current, {
       controls: true,
-      fill: true,  // Use fill instead of fluid for better container sizing
-      responsive: false,  // Disable responsive to prevent aspect ratio issues
+      fluid: false,  // Disable fluid to use explicit container sizing
+      responsive: true,  // Keep responsive for better playback
+      aspectRatio: '16:9',  // Set explicit aspect ratio
       playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 2],
       html5: {
         vhs: {
@@ -401,30 +402,32 @@ export function VideoPlayer({ className }: VideoPlayerProps) {
 
   return (
     <Card className={cn(
-      "overflow-hidden transition-all h-full",
-      isPlaying ? "min-h-[300px]" : "min-h-[60px]",
+      "overflow-hidden transition-all",
+      isPlaying ? "h-full" : "h-[80px]",
       className
     )} data-testid="video-player">
-      <CardContent className="p-0 h-full flex flex-col">
+      <CardContent className="p-0 h-full">
         {/* Video Player - ALWAYS MOUNTED (never conditional) */}
         <div className={cn(
-          "relative bg-black rounded-lg overflow-hidden flex-1",
-          showPlaceholder && "h-[60px] flex-none"
+          "relative bg-black rounded-lg overflow-hidden h-full w-full",
+          showPlaceholder && "!h-[60px]"
         )}>
           {isMounted && (
             <div
               data-vjs-player
               suppressHydrationWarning
               className={cn(
-                "w-full h-full",
+                "vjs-container",
                 showPlaceholder && "hidden"
               )}
+              style={{ width: '100%', height: '100%' }}
             >
               {/* Video element is ALWAYS rendered - never unmounted */}
               <video
                 ref={videoRef}
-                className="video-js vjs-big-play-centered w-full h-full"
+                className="video-js vjs-big-play-centered"
                 suppressHydrationWarning
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
           )}
