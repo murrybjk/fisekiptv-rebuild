@@ -1,0 +1,51 @@
+[2025-10-29T16:31:07.984Z] [INFO] Starting Cycle 1: Connection Flow and Initial Page Load
+[2025-10-29T16:31:08.652Z] [PASS] ✓ Page loaded successfully
+[2025-10-29T16:31:08.672Z] [PASS] ✓ Connection dialog is visible
+[2025-10-29T16:31:08.700Z] [PASS] ✓ Connection form filled
+[2025-10-29T16:31:08.711Z] [PASS] ✓ Connect button is clickable
+[2025-10-29T16:31:11.228Z] [PASS] ✓ Dialog closed
+[2025-10-29T16:31:11.228Z] [INFO] Starting Cycle 2: Layout and Responsiveness
+[2025-10-29T16:31:11.770Z] [PASS] ✓ Mobile player height (36px) is acceptable
+[2025-10-29T16:31:12.293Z] [PASS] ✓ Tablet player height (36px) is acceptable
+[2025-10-29T16:31:12.822Z] [PASS] ✓ Desktop player height (36px) is acceptable
+[2025-10-29T16:31:12.822Z] [INFO] Starting Cycle 3: Channel Display and Visibility
+[2025-10-29T16:31:17.826Z] [WARN] ⚠ Channels section not found (expected without IPTV server connection)
+[2025-10-29T16:31:17.826Z] [INFO] Starting Cycle 4: Search and Filter UI
+[2025-10-29T16:31:17.828Z] [FAIL] ✗ Search bar is not visible
+[2025-10-29T16:31:17.830Z] [FAIL] ✗ View toggle is not visible
+[2025-10-29T16:31:17.830Z] [INFO] Starting Cycle 5: Sidebar Navigation
+[2025-10-29T16:31:17.831Z] [FAIL] ✗ Sidebar is not visible
+[2025-10-29T16:31:17.832Z] [FAIL] ✗ Sidebar has no navigation items
+[2025-10-29T16:31:17.832Z] [INFO] Starting Cycle 6: Tab Navigation
+[2025-10-29T16:31:17.833Z] [FAIL] ✗ Expected at least 3 tabs, found 0
+[2025-10-29T16:31:17.833Z] [INFO] Starting Cycle 7: Performance and Console Errors
+[2025-10-29T16:31:17.835Z] [PASS] ✓ Page load time (134ms) is acceptable
+[2025-10-29T16:31:17.835Z] [INFO] 
+================================================================================
+[2025-10-29T16:31:17.835Z] [INFO] REGRESSION TEST RESULTS
+[2025-10-29T16:31:17.835Z] [INFO] ================================================================================
+[2025-10-29T16:31:17.835Z] [INFO] Total Passed: 9
+[2025-10-29T16:31:17.835Z] [INFO] Total Failed: 5
+[2025-10-29T16:31:17.835Z] [INFO] Total Warnings: 1
+[2025-10-29T16:31:17.835Z] [INFO] ================================================================================
+
+[2025-10-29T16:31:17.835Z] [INFO] Failed Tests:
+[2025-10-29T16:31:17.836Z] [FAIL]   - ✗ Search bar is not visible
+[2025-10-29T16:31:17.836Z] [FAIL]   - ✗ View toggle is not visible
+[2025-10-29T16:31:17.836Z] [FAIL]   - ✗ Sidebar is not visible
+[2025-10-29T16:31:17.836Z] [FAIL]   - ✗ Sidebar has no navigation items
+[2025-10-29T16:31:17.836Z] [FAIL]   - ✗ Expected at least 3 tabs, found 0
+[2025-10-29T16:31:17.836Z] [INFO] 
+Warnings:
+[2025-10-29T16:31:17.836Z] [WARN]   - ⚠ Channels section not found (expected without IPTV server connection)
+[2025-10-29T16:31:17.836Z] [INFO] 
+Passed Tests:
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Page loaded successfully
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Connection dialog is visible
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Connection form filled
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Connect button is clickable
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Dialog closed
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Mobile player height (36px) is acceptable
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Tablet player height (36px) is acceptable
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Desktop player height (36px) is acceptable
+[2025-10-29T16:31:17.836Z] [PASS]   - ✓ Page load time (134ms) is acceptable

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direct Stream Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+        }
+        video {
+            width: 800px;
+            max-width: 100%;
+            background: #111;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #222;
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Direct TS Stream Test</h1>
+
+    <video id="testVideo" controls autoplay>
+        <source src="http://aihxvzbw.atlas-pro.xyz:88/XCVHJKOP1234/LE3FV5LU/185619" type="video/mp2t">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="info">
+        <h3>Stream Info:</h3>
+        <div id="status">Loading...</div>
+        <div id="details"></div>
+    </div>
+
+    <script>
+        const video = document.getElementById('testVideo');
+        const status = document.getElementById('status');
+        const details = document.getElementById('details');
+
+        function updateStatus() {
+            const readyStates = ['HAVE_NOTHING', 'HAVE_METADATA', 'HAVE_CURRENT_DATA', 'HAVE_FUTURE_DATA', 'HAVE_ENOUGH_DATA'];
+            const networkStates = ['NETWORK_EMPTY', 'NETWORK_IDLE', 'NETWORK_LOADING', 'NETWORK_NO_SOURCE'];
+
+            status.innerHTML = `
+                <strong>Ready State:</strong> ${readyStates[video.readyState]} (${video.readyState})<br>
+                <strong>Network State:</strong> ${networkStates[video.networkState]} (${video.networkState})<br>
+                <strong>Current Time:</strong> ${video.currentTime.toFixed(2)}s<br>
+                <strong>Paused:</strong> ${video.paused}<br>
+                <strong>Dimensions:</strong> ${video.videoWidth}x${video.videoHeight}<br>
+                <strong>Error:</strong> ${video.error ? video.error.message : 'None'}
+            `;
+        }
+
+        video.addEventListener('loadstart', () => {
+            console.log('loadstart');
+            details.innerHTML += '[loadstart] ';
+            updateStatus();
+        });
+
+        video.addEventListener('loadedmetadata', () => {
+            console.log('loadedmetadata');
+            details.innerHTML += '[loadedmetadata] ';
+            updateStatus();
+        });
+
+        video.addEventListener('canplay', () => {
+            console.log('canplay');
+            details.innerHTML += '[canplay] ';
+            updateStatus();
+        });
+
+        video.addEventListener('playing', () => {
+            console.log('playing');
+            details.innerHTML += '[playing] ';
+            updateStatus();
+        });
+
+        video.addEventListener('error', (e) => {
+            console.error('error', e, video.error);
+            details.innerHTML += `[ERROR: ${video.error?.message}] `;
+            updateStatus();
+        });
+
+        setInterval(updateStatus, 1000);
+    </script>
+</body>
+</html>

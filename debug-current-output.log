@@ -1,0 +1,45 @@
+
+🔍 Inspecting CURRENT state (user already connected)...
+
+✓ Page loaded
+
+📸 Screenshot: test-screenshots/current-state.png
+
+═══════════════════════════════════════════════════════
+ANALYSIS RESULTS
+═══════════════════════════════════════════════════════
+
+Viewport: 1920x1080px
+
+--- SidebarInset ---
+{
+  "exists": false
+}
+
+--- Player Section ---
+{
+  "exists": false
+}
+
+--- Channels Section (.overflow-y-auto) ---
+{
+  "exists": false
+}
+
+--- Grid Container ---
+{
+  "exists": false
+}
+
+--- Grid Parent Chain (bottom to top) ---
+
+═══════════════════════════════════════════════════════
+DIAGNOSIS
+═══════════════════════════════════════════════════════
+
+❌ CRITICAL: Grid container does NOT exist
+   The .grid element is not in the DOM at all
+   Check: LiveTVLayout component is rendering
+
+✋ Browser staying open for 60 seconds for manual inspection...
+

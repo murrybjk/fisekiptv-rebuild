@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.turbo/
+dist/
+playwright-report/
+test-results/
+test-screenshots/
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.mp4
+*.mov
+*.mkv
+archive/

@@ -1,0 +1,98 @@
+
+🔍 Inspecting CURRENT state (user already connected)...
+
+✓ Page loaded
+
+📸 Screenshot: test-screenshots/current-state.png
+
+═══════════════════════════════════════════════════════
+ANALYSIS RESULTS
+═══════════════════════════════════════════════════════
+
+Viewport: 1920x1080px
+
+--- SidebarInset ---
+{
+  "exists": false
+}
+
+--- Player Section ---
+{
+  "exists": true,
+  "box": {
+    "x": 787,
+    "y": 555,
+    "width": 345,
+    "height": 36,
+    "visible": true
+  },
+  "styles": {
+    "display": "inline-flex",
+    "visibility": "visible",
+    "opacity": "1",
+    "overflow": "visible",
+    "overflowY": "visible",
+    "height": "36px",
+    "minHeight": "0px",
+    "maxHeight": "none",
+    "flexGrow": "0",
+    "flexShrink": "0"
+  },
+  "childCount": 0,
+  "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 w-full"
+}
+
+--- Channels Section (.overflow-y-auto) ---
+{
+  "exists": false
+}
+
+--- Grid Container ---
+{
+  "exists": true,
+  "box": {
+    "x": 710,
+    "y": 305,
+    "width": 500,
+    "height": 470,
+    "visible": true
+  },
+  "styles": {
+    "display": "grid",
+    "visibility": "visible",
+    "opacity": "1",
+    "overflow": "visible",
+    "overflowY": "visible",
+    "height": "470.125px",
+    "minHeight": "0px",
+    "maxHeight": "none",
+    "flexGrow": "0",
+    "flexShrink": "1"
+  },
+  "childCount": 3,
+  "className": "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-[500px]"
+}
+
+--- Grid Parent Chain (bottom to top) ---
+[0] DIV (h=470px, overflow=visible)
+    bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-
+[1] BODY (h=1080px, overflow=hidden)
+    inter_2fe1ab3d-module__-T-KAq__className antialiased
+[2] HTML (h=1080px, overflow=visible)
+    
+
+═══════════════════════════════════════════════════════
+DIAGNOSIS
+═══════════════════════════════════════════════════════
+
+✓ Grid exists and has children!
+   Grid dimensions: 500x470px
+   Grid children: 3
+
+   If you still see black screen, check:
+   - Are children visible? (check opacity, color)
+   - Are children positioned off-screen?
+   - Is there a z-index issue?
+
+✋ Browser staying open for 60 seconds for manual inspection...
+
